@@ -46,3 +46,30 @@ cursor: pointer;
 }
 .box:hover{
 background-color: rgb(231, 24, 169);
+
+}
+.gameinfo{
+  padding: 24px;
+  
+}
+.img-box img{
+  width: 0;
+  transition: width 0.5s ease-in-out;
+}
+.info{
+font-size: 28px;
+margin-left: 74px;
+}
+
+#reset{
+ padding: 10px 20px;
+ margin-left: 78px;
+ font-size: 20px;
+ border-radius: 6px;
+ background-color: rgb(199, 154, 236);
+margin-top: 10px;
+}
+  
+  
+  
+  
