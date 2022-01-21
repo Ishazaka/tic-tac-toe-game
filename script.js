@@ -29,3 +29,20 @@ const checkwin = ()=>{
   [2,4,6],
   
  ]
+
+ 
+wins.forEach(e =>{
+if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) &&   (boxtext[e[0]].innerText !== '' )  ){
+  document.querySelector(".info").innerText = boxtext[e[0]].innerText + " has won the game" 
+  isgameover = true;
+  document.querySelector('.img-box').getElementsByTagName('img')[0].style.width = '190px';
+  audioturn.pause();
+  gameover.play(); 
+  document.getElementsByClassName("gameend")[0].style.display ='block';
+}
+
+})
+
+}
+
+ 
