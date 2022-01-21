@@ -70,6 +70,43 @@ margin-left: 74px;
 margin-top: 10px;
 }
   
+ 
+.gameend{
+  position: absolute;
+  margin-top: 20vh;
+  margin-right: 28%;
+  background-color: rgb(154, 72, 221);
+  font-size: 2vw;
+  z-index: 2;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px;
+  display: none;
+}
+
+
+@media screen and (max-width:800px) {
   
+  .game-container{
+    flex-wrap: wrap;
+  }
+.gameinfo{
+  margin-top: 34px;
+}
+.gameinfo h1{
+  font-size: 1.5rem
+}
+.container{
+   display: grid;
+grid-template-rows: repeat(3, 20vw);
+grid-template-columns: repeat(3, 20vw);
+
+}
+.gamened{
+    margin-top: 15vh;
+  margin-right: 22%;
+}
+
+} 
   
   
