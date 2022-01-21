@@ -66,6 +66,19 @@ Array.from(boxes).forEach(element =>{
 
 })
  
+// reset button
+reset.addEventListener('click', () =>{
+let textboxes = document.querySelectorAll(".boxtext");
+Array.from(textboxes).forEach(element =>{
+  element.innerText = "";
+})
+turn ="X",
+isgameover = false;
+ document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
+  document.querySelector('.img-box').getElementsByTagName('img')[0].style.width = '0';
+    document.getElementsByClassName("gameend")[0].style.display ='none';
+})
+
 
 
 
