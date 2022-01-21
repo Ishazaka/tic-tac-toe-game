@@ -31,4 +31,18 @@ grid-template-rows: repeat(3, 10vw);
 grid-template-columns: repeat(3, 10vw);
   
 }
+.box{
+ 
+  padding: 3px;
+  margin: 3px;
+ box-shadow: 0 0 10px ;
+background: rgb(226, 71, 226);
+font-size: 6.5vw;
+cursor: pointer;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 
+}
+.box:hover{
+background-color: rgb(231, 24, 169);
