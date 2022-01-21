@@ -45,4 +45,27 @@ if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].inner
 
 }
 
+
+// game logic
+
+let boxes = document.getElementsByClassName("box");
+Array.from(boxes).forEach(element =>{
+  let boxtext = element.querySelector('.boxtext');
+  element.addEventListener('click', ()=>{
+  if(boxtext.innerText === ''){
+    boxtext.innerText = turn;
+    turn = changeturn();
+    audioturn.play();
+    checkwin();
+    if(!isgameover){
+     document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
+    }
+  }
+
+  })
+
+})
  
+
+
+
