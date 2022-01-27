@@ -55,3 +55,53 @@ const checkwin = ()=>{
 [9,13,17],
 
  ]
+wins.forEach(e =>{
+if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) &&   (boxtext[e[0]].innerText !== '' )  ){
+  document.querySelector(".info").innerText = boxtext[e[0]].innerText + " has won the game" 
+  isgameover = true;
+  document.querySelector('.img-box').getElementsByTagName('img')[0].style.width = '190px';
+  audioturn.pause();
+  gameover.play(); 
+  document.getElementsByClassName("gameend")[0].style.display ='block';
+}
+
+})
+
+}
+
+
+// game logic
+
+let boxes = document.getElementsByClassName("box");
+Array.from(boxes).forEach(element =>{
+  let boxtext = element.querySelector('.boxtext');
+  element.addEventListener('click', ()=>{
+  if(boxtext.innerText === ''){
+    boxtext.innerText = turn;
+    turn = changeturn();
+    audioturn.play();
+    checkwin();
+    if(!isgameover){
+     document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
+    }
+  }
+
+  })
+
+})
+
+// reset button
+reset.addEventListener('click', () =>{
+let textboxes = document.querySelectorAll(".boxtext");
+Array.from(textboxes).forEach(element =>{
+  element.innerText = "";
+})
+turn ="X",
+isgameover = false;
+ document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
+  document.querySelector('.img-box').getElementsByTagName('img')[0].style.width = '0';
+    document.getElementsByClassName("gameend")[0].style.display ='none';
+})
+
+ 
+ 
